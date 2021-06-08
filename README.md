@@ -6,7 +6,7 @@
 
  date    : 2021/06/07 
 
- update  : 2021/06/08
+ update  : 2021/06/09
 
 ***
 ### Summary
@@ -30,6 +30,10 @@ yarn dev
 * mDat : chart.js sample (/mdats)
 
 ![img](https://github.com/kuc-arc-f/screen-img/blob/master/web/2021/mdats/ss-chart0608.png?raw=true "")
+
+***
+* plan
+![img](https://github.com/kuc-arc-f/screen-img/blob/master/web/2021/plan/ss-plan0609.png?raw=true "")
 
 ***
 * todos

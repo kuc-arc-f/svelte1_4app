@@ -22,19 +22,14 @@
             <li><a class="dropdown-item" href="/books"use:link>Books</a></li>
           </ul>
         </li>        
-        <!--
-        <li class="nav-item">
-          <a class="nav-link" href="/tasks" use:link>Tasks</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/books" use:link>Books</a>
-        </li>
-        -->
         <li class="nav-item">
           <a class="nav-link" href="/todos" use:link>Todos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/mdats" use:link>mData</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/plans" use:link>Plans</a>
         </li>
       </ul>
       <ul class="navbar-nav mb-2 mb-lg-0">

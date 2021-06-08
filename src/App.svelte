@@ -25,6 +25,11 @@ import mdats_create from './pages/mdats/create.svelte'
 import mdats_chart from './pages/mdats/chart.svelte'
 import mdats_show from './pages/mdats/show.svelte'
 import mdats_edit from './pages/mdats/edit.svelte'
+//plans
+import plans from './pages/plans/index.svelte'
+import plans_create from './pages/plans/create.svelte'
+import plans_show from './pages/plans/show.svelte'
+import plans_edit from './pages/plans/edit.svelte'
 
 export const routes = {
   '/': index,
@@ -47,7 +52,11 @@ export const routes = {
   '/mdats/create': mdats_create,
   '/mdats/chart': mdats_chart,
   '/mdats/show/:id': mdats_show,
-  '/mdats/edit/:id': mdats_edit, 
+  '/mdats/edit/:id': mdats_edit,
+  '/plans/': plans,
+  '/plans/create': plans_create,
+  '/plans/edit/:id': plans_edit,
+  
 }	
 </script>
 
