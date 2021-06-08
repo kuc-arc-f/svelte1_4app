@@ -32,4 +32,16 @@ export default {
     });
     return ret
   },
+   btn_css_change: function(stat){
+    console.log("stat=" , stat)
+      var elemTodo = document.getElementById('btn_todo');
+      var elemComplete = document.getElementById('btn_todo_complete');
+      if(stat === 1){
+        elemTodo.classList.remove("btn-outline-success");
+        elemComplete.classList.add("btn-outline-success");
+      }else{
+        elemTodo.classList.add("btn-outline-success");
+        elemComplete.classList.remove("btn-outline-success");
+      }
+    }  
 }

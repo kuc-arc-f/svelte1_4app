@@ -1,21 +1,25 @@
 <script>
 import {link} from 'svelte-spa-router'
+import { onMount } from 'svelte';
 import Dexie from 'dexie';  
 import LibTask from '../../lib/LibTask';
 import LibDexie from '../../lib/LibDexie';
 import LibTodos from '../../lib/LibTodos';
 //
-export let todo_items = [] 
+export let todo_items = [] , stat_complete = 0
 var config = LibTask.get_const()
 var db = new Dexie( config.DB_NAME );
 db.version(config.DB_VERSION).stores( config.DB_STORE );  
 
 async function handleClickTodos() {
-  await get_items(db, 0)
+  stat_complete = 0
+  await get_items(db, stat_complete)
+  LibTodos.btn_css_change(stat_complete)
 }
 async function handleClickComplete() {
-//  alert('clicked')
-  await get_items(db, 1)
+  stat_complete = 1
+  LibTodos.btn_css_change(stat_complete)
+  await get_items(db, stat_complete)
 }
 const  get_items = async function (db, complete){
   var items = await db.todos.toArray()
@@ -23,7 +27,11 @@ const  get_items = async function (db, complete){
   todo_items = LibTodos.get_item(todo_items , complete)
   return items
 }
-get_items(db, 0)
+get_items(db, stat_complete)
+onMount(async() => {
+  LibTodos.btn_css_change(stat_complete)
+console.log('the component has mounted');
+});
 </script>
 
 <!-- -->
@@ -32,16 +40,17 @@ get_items(db, 0)
   <a href="/todos/create" use:link class="btn btn-primary">Create
   </a>
   <hr />
-  <button on:click={handleClickTodos} class="btn btn-sm btn-outline-primary">
-    Not Complete</button>
-  <button on:click={handleClickComplete} class="btn btn-sm btn-outline-primary">
+  <button on:click={handleClickTodos} id="btn_todo" class="btn ">
+    NotComplete</button>
+  <button on:click={handleClickComplete} id="btn_todo_complete"
+   class="btn ">
     Completed</button>
-  <hr />
+  <hr class="mt-0"/>
   {#each todo_items as item}
   <h3><a href={`/todos/show/${item.id}`} use:link>{item.title}</a>
   </h3>
   <p>ID : {item.id}
-    <a href={`/todos/edit/${item.id}`} use:link class="ml-2 btn btn-outline-primary">
+    <a href={`/todos/edit/${item.id}`} use:link class="ml-2 btn btn-sm btn-outline-primary">
       Edit</a>
   </p>
   <hr />

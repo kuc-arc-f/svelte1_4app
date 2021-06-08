@@ -6,7 +6,7 @@
 
  date    : 2021/06/07 
 
- update  :
+ update  : 2021/06/08
 
 ***
 ### Summary
@@ -31,6 +31,10 @@ yarn dev
 
 ![img](https://github.com/kuc-arc-f/screen-img/blob/master/web/2021/mdats/ss-chart0608.png?raw=true "")
 
+***
+* todos
+
+![img](https://github.com/kuc-arc-f/screen-img/blob/master/web/2021/todos/ss-todo0608.png?raw=true "")
 
 ***
 ### sample URL
