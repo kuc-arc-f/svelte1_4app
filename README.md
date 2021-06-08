@@ -4,7 +4,7 @@
 
  Author  : Kouji Nakashima / kuc-arc-f.com
 
- date    : 2021/06/07
+ date    : 2021/06/07 
 
  update  :
 
@@ -35,6 +35,7 @@ yarn dev
 ***
 ### sample URL
 
+https://cms-kuc-svelte1-4app.vercel.app/
 
 ***
 ### Blog:
