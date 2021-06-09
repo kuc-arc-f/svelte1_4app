@@ -1,5 +1,6 @@
 <script>
 import Dexie from 'dexie';  
+import Nav from '../../components/Navi.svelte';
 import LibTask from '../../lib/LibTask';
 import LibDexie from '../../lib/LibDexie';
 
@@ -32,6 +33,7 @@ async function add_item(){
 </script>
 
 <!-- -->
+<Nav />
 <div class="container">
 	<h3>Todos - Create</h3>
   <hr />

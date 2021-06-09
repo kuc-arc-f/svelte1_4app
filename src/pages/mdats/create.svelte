@@ -1,5 +1,6 @@
 <script>
 import Dexie from 'dexie';  
+import Nav from '../../components/Navi.svelte';
 import LibTask from '../../lib/LibTask';
 import LibDexie from '../../lib/LibDexie';
 
@@ -30,6 +31,7 @@ console.log(item)
 </script>
 
 <!-- -->
+<Nav />
 <div class="container py-2">
 	<h3 >mData - Create</h3>
   <hr />

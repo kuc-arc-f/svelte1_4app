@@ -1,8 +1,14 @@
-/*
- * Globals
- */
-
-
+html,
+body,
+body > div:first-child,
+main
+{
+  height: 100%;
+}
+body {
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+} 
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,

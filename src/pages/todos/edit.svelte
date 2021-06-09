@@ -2,6 +2,7 @@
 import {link} from 'svelte-spa-router'
 import { onMount } from 'svelte';
 import Dexie from 'dexie';  
+import Nav from '../../components/Navi.svelte';
 import LibTask from '../../lib/LibTask';
 import LibTodos from '../../lib/LibTodos';
 import LibDexie from '../../lib/LibDexie';
@@ -67,6 +68,7 @@ async function save_item(db){
 </script>
 
 <!-- -->
+<Nav />
 <div class="container">
 	<h3>todos - Edit</h3>
   ID : {params.id}

@@ -1,5 +1,6 @@
 <script>
 import {link} from 'svelte-spa-router'
+import Nav from '../../components/Navi.svelte';
 import Dexie from 'dexie';  
 import LibTask from '../../lib/LibTask';
 import LibDexie from '../../lib/LibDexie';
@@ -17,6 +18,7 @@ db.version(config.DB_VERSION).stores( config.DB_STORE );
 </script>
 
 <!-- -->
+<Nav />
 <div class="container">
 	<h3>mData - index</h3>
   <p class="text-secondary">measure data , display chart.js

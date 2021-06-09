@@ -1,5 +1,6 @@
 <script>
 import {link} from 'svelte-spa-router'
+import Nav from '../../components/Navi.svelte';
 import Dexie from 'dexie';
 import moment from 'moment';  
 import LibTask from '../../lib/LibTask';
@@ -48,6 +49,7 @@ console.log(item)
 </script>
 
 <!-- -->
+<Nav />
 <div class="container">
 	<h3>Plan - edit</h3>
   ID : {params.id}

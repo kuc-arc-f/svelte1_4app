@@ -1,5 +1,6 @@
 <script>
 import {link} from 'svelte-spa-router'
+import Nav from '../../components/Navi.svelte';
 import { onMount } from 'svelte';
 import Dexie from 'dexie';
 import moment from 'moment';  
@@ -45,13 +46,9 @@ var config = LibTask.get_const()
 var db = new Dexie( config.DB_NAME );
 db.version(config.DB_VERSION).stores( config.DB_STORE );
 
-//var now_dt = moment(new Date() ).format('YYYY-MM-DD')
-//console.log(now_dt)
-
 const  get_items = async function (db){
   var items = await db.mdats.toArray()
   items = LibMdat.get_convert_date(items)
-//  items = LibDexie.get_reverse_items(items)
   var arr = convert_chart_arr(items)
 console.log(arr)
   weight_data = arr.wnum
@@ -63,7 +60,6 @@ function convert_chart_arr( items ){
 	var lbl = []
 	items.forEach( function (item) {
 //console.log( item );    
-//		lbl.push( item.date_str )                
 		lbl.push( item.mdate )                
 		wnum.push( item.w_num )                
 	});
@@ -75,7 +71,6 @@ function convert_chart_arr( items ){
 }
 onMount(async() => {
   await get_items(db)
-//  weight_data = [2, 3, 5]
   const config = get_config(weight_data)
 //console.log(config);
   var ctx = document.getElementById('myChart').getContext('2d');
@@ -85,6 +80,7 @@ console.log('the component has mounted');
 </script>
 
 <!-- -->
+<Nav />
 <div class="container">
 	<h3> mDat - Chart</h3>
 	<hr />

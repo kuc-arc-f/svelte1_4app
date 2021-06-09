@@ -4,6 +4,8 @@ import Navi from './components/Navi.svelte'
 import index from './pages/index.svelte'
 import home from './pages/home.svelte'
 import about from './pages/about.svelte'
+import license from './pages/license.svelte'
+//
 import test from  './pages/test.svelte'
 import tasks from './pages/tasks/index.svelte'
 import tasks_create from './pages/tasks/create.svelte'
@@ -35,6 +37,7 @@ export const routes = {
   '/': index,
   '/home': home,
   '/about': about,
+  '/license': license,
   '/test': test,
   '/tasks/': tasks,
   '/tasks/create': tasks_create,
@@ -62,7 +65,6 @@ export const routes = {
 
 <!-- main -->
 <main>
-  <Navi />
   <Router {routes} />
 </main>
 

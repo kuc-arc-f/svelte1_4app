@@ -1,5 +1,6 @@
 <script>
 import {link} from 'svelte-spa-router'
+import Nav from '../../components/Navi.svelte';
 import { onMount } from 'svelte';
 import Dexie from 'dexie';  
 import LibTask from '../../lib/LibTask';
@@ -35,6 +36,7 @@ console.log('the component has mounted');
 </script>
 
 <!-- -->
+<Nav />
 <div class="container">
 	<h3>Todos - index</h3>
   <a href="/todos/create" use:link class="btn btn-primary">Create

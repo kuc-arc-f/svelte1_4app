@@ -1,4 +1,5 @@
 <script>
+import Nav from '../../components/Navi.svelte';
 import Dexie from 'dexie';  
 import moment from 'moment';
 import LibTask from '../../lib/LibTask';
@@ -55,6 +56,7 @@ console.log(item)
 </script>
 
 <!-- -->
+<Nav />
 <div class="container pb-4 mb-4">
 	<h3>Books - Create</h3>
   <hr />

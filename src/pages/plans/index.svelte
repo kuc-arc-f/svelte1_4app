@@ -1,5 +1,6 @@
 <script>
 import {link} from 'svelte-spa-router'
+import Nav from '../../components/Navi.svelte';
 import Dexie from 'dexie'; 
 import moment from 'moment' 
 import LibTask from '../../lib/LibTask';
@@ -41,6 +42,7 @@ get_items(db)
 </style>
 
 <!-- -->
+<Nav />
 <div class="container py-3">
   <h3>Plan : {DATA.month_str}</h3>
   <a href="/plans/create" use:link class="btn btn-primary">Create

@@ -1,5 +1,6 @@
 <script>
 import {link} from 'svelte-spa-router'
+import Nav from '../../components/Navi.svelte';
 import Dexie from 'dexie';  
 import LibTask from '../../lib/LibTask';
 import LibDexie from '../../lib/LibDexie';
@@ -15,6 +16,7 @@ export let params = Params
 </script>
 
 <!-- -->
+<Nav />
 <div class="container">
 	<h3>Tasks - show</h3>
   ID : {params.id}
